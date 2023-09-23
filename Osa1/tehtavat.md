@@ -5,7 +5,7 @@
 ✔️| 1.3: kurssitiedot step3  </br>
 ✔️| 1.4: kurssitiedot step4 </br>
 ✔️| 1.5: kurssitiedot step5  </br>
-⌛| 1.6: unicafe step1  </br>
+✔️| 1.6: unicafe step1  </br>
 ⌛| 1.7: unicafe step2  </br>
 ⌛| 1.8: unicafe step3  </br>
 ⌛| 1.9: unicafe step4  </br>
