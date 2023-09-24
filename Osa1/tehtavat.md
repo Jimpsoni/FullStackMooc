@@ -10,8 +10,8 @@
 ✔️| 1.8: unicafe step3  </br>
 ✔️| 1.9: unicafe step4  </br>
 ✔️| 1.11: unicafe step5  </br>
-⌛| 1.12: anekdootit step1  </br>
-⌛| 1.13: anekdootit step2  </br>
-⌛| 1.14: anekdootit step3  </br>
+✔️| 1.12: anekdootit step1  </br>
+✔️| 1.13: anekdootit step2  </br>
+✔️| 1.14: anekdootit step3  </br>
 
 
