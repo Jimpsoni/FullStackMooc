@@ -4,7 +4,7 @@
 ✔️| 2.4: kurssitiedot step9<br>
 ✔️| 2.5: erillinen moduuli<br>
 ✔️| 2.6: puhelinluettelo step1<br>
-⌛ | 2.7: puhelinluettelo step2<br>
+✔️| 2.7: puhelinluettelo step2<br>
 ⌛ | 2.8: puhelinluettelo step3<br>
 ⌛ | 2.9: puhelinluettelo step4<br>
 ⌛ | 2.10: puhelinluettelo step5<br>
