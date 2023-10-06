@@ -9,8 +9,8 @@
 ✔️| 2.9: puhelinluettelo step4<br>
 ✔️| 2.10: puhelinluettelo step5<br>
 ✔️| 2.11: puhelinluettelo step6<br>
-⌛ | 2.12: puhelinluettelo step7<br>
-⌛ | 2.13: puhelinluettelo step8<br>
+✔️| 2.12: puhelinluettelo step7<br>
+✔️| 2.13: puhelinluettelo step8<br>
 ⌛ | 2.14: puhelinluettelo step9<br>
 ⌛ | 2.15: puhelinluettelo step10<br>
 ⌛ | 2.16: puhelinluettelo step11<br>
