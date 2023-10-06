@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
+import service from './services/services'
+
+/* REACT KOMPONENTIT */
 
 const Part = ({ name, number }) => <p>{name}, {number}</p>
-
 const Filter = ({filter, handleFilterChange}) => <div> filter shown with: <input value={filter} onChange={handleFilterChange}/></div>
-
 const Persons = ({persons}) => persons.map(person => <Part key={person.name} name={person.name} number={person.number} />)
-
 const PersonForm = ({onSubmit, newName, newNumber, handleNameChange, handleNumberChange}) => {
   return (
     <form onSubmit={onSubmit}>
@@ -20,21 +19,22 @@ const PersonForm = ({onSubmit, newName, newNumber, handleNameChange, handleNumbe
 }
 
 const App = () => {
-
   /* Hooks */
 
-  useEffect(() => { /* Fetch the data from server */
-    axios
-      .get('http://localhost:3001/persons')
-      .then(response => setPersons(response.data)
-      )}, [/* Only render once */])
+  useEffect(() => {
+    service
+      .getAll()
+      .then(initialPersons => {
+        setPersons(initialPersons)
+      })
+  }, [])
 
   const [persons, setPersons] = useState([])
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
   const [filter, setNewFilter] = useState('')
   
-  /* Filter the names we want to show*/
+  /* Filtteri */
   const namesToShow = persons.filter(person => person.name.toLowerCase().includes(filter.toLowerCase()))
 
   /* Event handlers */
@@ -49,15 +49,13 @@ const App = () => {
     persons.forEach((person) => { if (newName == person.name) { doesntExist = false; return } } )
     
     if (doesntExist) {
-      const personObject = {
-        name: newName,
-        number: newNumber
-      }
+      const personObject = { name: newName, number: newNumber }
+    
+      service.create(personObject)
       setPersons(persons.concat(personObject))
-      } else {
-      alert(`${newName} is already added to phonebook`)
-      }
 
+      } else { alert(`${newName} is already added to phonebook`) }
+    
     setNewName('')
     setNewNumber('')
  }
