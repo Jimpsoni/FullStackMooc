@@ -11,6 +11,11 @@ const getAll = () => {
     })
 }
 
-const update = ( id ) => { const deleteRequest = axios.delete(baseUrl + `/${id}`) }
+const update = ( newPerson, number ) => { 
+  const newData = {...newPerson, number:number }
+  axios.put(baseUrl + `/${newPerson.id}`, newData)
+ }
 
-export default {getAll, create, update}
+const deleteItem = ( id ) => { axios.delete(baseUrl + `/${id}`) }
+
+export default {getAll, create, update, deleteItem}
