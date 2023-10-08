@@ -3,9 +3,14 @@ import service from './services/services'
 
 /* REACT KOMPONENTIT */
 
-const Part = ({ name, number }) => <p>{name}, {number}</p>
+const Part = ({ person, buttonAction }) => { 
+  return (
+  <div>
+    <span>{person.name}, {person.number}</span> 
+    <button type="button" onClick={() => buttonAction(person)}>Delete</button>
+  </div>) }
 const Filter = ({filter, handleFilterChange}) => <div> filter shown with: <input value={filter} onChange={handleFilterChange}/></div>
-const Persons = ({persons}) => persons.map(person => <Part key={person.name} name={person.name} number={person.number} />)
+const Persons = ({persons, buttonAction}) => persons.map(person => <Part key={person.name} person={person} buttonAction={buttonAction} />)
 const PersonForm = ({onSubmit, newName, newNumber, handleNameChange, handleNumberChange}) => {
   return (
     <form onSubmit={onSubmit}>
@@ -42,6 +47,14 @@ const App = () => {
   const handleNumberChange = (event) => setNewNumber(event.target.value)
   const handleFilterChange = (event) => setNewFilter(event.target.value)
 
+  /* Delete items from db */
+  const deletePerson = (person) => {
+    if (window.confirm(`delete ${person.name}?`)) {
+      service.update(person.id)
+      setPersons(persons.filter(n => n.id !== person.id))
+    }
+  }
+
   /* The function we execute when we submit the form */
   const addName = (event) => {
     event.preventDefault()
@@ -70,7 +83,7 @@ const App = () => {
        newName={newName} newNumber={newNumber}/>
       
       <h2>Numbers</h2>
-      <Persons persons={namesToShow}/>
+      <Persons persons={namesToShow} buttonAction={deletePerson}/>
     </div>
   )
 
