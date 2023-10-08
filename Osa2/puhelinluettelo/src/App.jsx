@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import service from './services/services'
+import './index.css'
 
 /* REACT KOMPONENTIT */
 
@@ -24,6 +25,23 @@ const Part = ({ person, buttonAction }) => {
   </div>) 
   }
 
+const Notification = ({ message, warningType }) => {
+    if (message === null) {
+      return null
+    }
+    if (warningType == "info") {
+      return (
+        <div className="info">
+          {message}
+        </div>
+      )
+    }
+    return (
+      <div className="error">
+        {message}
+      </div>
+    )
+}
 
 
 const App = () => {
@@ -41,6 +59,8 @@ const App = () => {
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
   const [filter, setNewFilter] = useState('')
+  const [errorMessage, setErrorMessage] = useState(null)
+  const [warningType, setWarningType] = useState('info')
   
   /* Filtteri */
   const namesToShow = persons.filter(person => person.name.toLowerCase().includes(filter.toLowerCase()))
@@ -53,8 +73,10 @@ const App = () => {
   /* Delete items from db */
   const deletePerson = (person) => {
     if (window.confirm(`delete ${person.name}?`)) {
-      service.deleteItem(person.id)
+      service.deleteItem(person.id).then( showMessage(`Deleted ${person.name}`, "info"))
+
       setPersons(persons.filter(n => n.id !== person.id))
+
     }
   }
 
@@ -72,15 +94,19 @@ const App = () => {
         return } 
       })
     
+
     if (doesntExist) {
       const personObject = { name: newName, number: newNumber }
       service.create(personObject)
-      setPersons(persons.concat(personObject))
+        .then(response => setPersons(persons.concat({...personObject, id: response.data.id})))
+        .then(showMessage(`Added ${personObject.name}`, "info"))
 
     } else { 
         if (window.confirm(`${newPerson.name} is already added to the phonebook, replace the old number with a new one?`)) {
           service.update(newPerson, newNumber)
-          setPersons(persons.map((person) => { if (person.name == newPerson.name) { person.number = newNumber } return person}))
+            .then(setPersons(persons.map((person) => { if (person.name == newPerson.name) { person.number = newNumber } return person})))
+            .then(() => showMessage(`Updated ${newPerson.name} contact information`, "info"))
+            .catch(() => showMessage(`Information of ${newPerson.name} has already been removed from server`, "error"))
         }
        }
     
@@ -88,9 +114,20 @@ const App = () => {
     setNewNumber('')
  }
 
+ const showMessage = ( message, warningType ) => {
+  setWarningType(warningType)
+  setErrorMessage(message)
+  setTimeout(() => {
+    setErrorMessage(null)
+  }, 5000)
+
+}
   return (
     <div>
       <h2>Phonebook</h2>
+
+      <Notification message={errorMessage} warningType={warningType}/>
+
       <Filter handleFilterChange={handleFilterChange} value={filter}/>
 
       <h2>add a new</h2>
