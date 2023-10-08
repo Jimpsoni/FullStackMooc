@@ -3,12 +3,6 @@ import service from './services/services'
 
 /* REACT KOMPONENTIT */
 
-const Part = ({ person, buttonAction }) => { 
-  return (
-  <div>
-    <span>{person.name}, {person.number}</span> 
-    <button type="button" onClick={() => buttonAction(person)}>Delete</button>
-  </div>) }
 const Filter = ({filter, handleFilterChange}) => <div> filter shown with: <input value={filter} onChange={handleFilterChange}/></div>
 const Persons = ({persons, buttonAction}) => persons.map(person => <Part key={person.name} person={person} buttonAction={buttonAction} />)
 const PersonForm = ({onSubmit, newName, newNumber, handleNameChange, handleNumberChange}) => {
@@ -22,6 +16,15 @@ const PersonForm = ({onSubmit, newName, newNumber, handleNameChange, handleNumbe
   </form>
   )
 }
+const Part = ({ person, buttonAction }) => { 
+  return (
+  <div>
+    <span>{person.name}, {person.number}</span> 
+    <button type="button" onClick={() => buttonAction(person)}>Delete</button>
+  </div>) 
+  }
+
+
 
 const App = () => {
   /* Hooks */
@@ -50,7 +53,7 @@ const App = () => {
   /* Delete items from db */
   const deletePerson = (person) => {
     if (window.confirm(`delete ${person.name}?`)) {
-      service.update(person.id)
+      service.deleteItem(person.id)
       setPersons(persons.filter(n => n.id !== person.id))
     }
   }
@@ -58,16 +61,28 @@ const App = () => {
   /* The function we execute when we submit the form */
   const addName = (event) => {
     event.preventDefault()
+
     let doesntExist = true
-    persons.forEach((person) => { if (newName == person.name) { doesntExist = false; return } } )
+    let newPerson = ''
+
+    persons.forEach((person) => { 
+      if (newName == person.name) { 
+        doesntExist = false; 
+        newPerson = person; 
+        return } 
+      })
     
     if (doesntExist) {
       const personObject = { name: newName, number: newNumber }
-    
       service.create(personObject)
       setPersons(persons.concat(personObject))
 
-      } else { alert(`${newName} is already added to phonebook`) }
+    } else { 
+        if (window.confirm(`${newPerson.name} is already added to the phonebook, replace the old number with a new one?`)) {
+          service.update(newPerson, newNumber)
+          setPersons(persons.map((person) => { if (person.name == newPerson.name) { person.number = newNumber } return person}))
+        }
+       }
     
     setNewName('')
     setNewNumber('')
