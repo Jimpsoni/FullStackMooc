@@ -9,7 +9,8 @@ const getAll = () => {
     return request.then(response => {
       return response.data
     })
-  }
+}
 
+const update = ( id ) => { const deleteRequest = axios.delete(baseUrl + `/${id}`) }
 
-export default {getAll, create}
+export default {getAll, create, update}
