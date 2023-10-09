@@ -2,6 +2,8 @@
 const express = require('express')
 const app = express()
 
+// Jotta voidaan parsea json objektit
+app.use(express.json())
 
 // Määritellään yhteystiedot
 let persons = [
@@ -32,6 +34,12 @@ let persons = [
       }
 ]
 
+
+// funktio joka luo uuden ID:n
+const generateID = () => Math.floor(Math.random() * 1000)
+
+
+
 // Määritellään API kutsut
 app.get('/api/persons', (req, res) => { res.json(persons) })
 
@@ -48,10 +56,41 @@ app.get('/info', (req, res) => {
     const time = new Date();
     console.log(time)
     res.send(`<p> ${message}</p> <p> ${time}</p>`)
-
-
 }) 
 
+app.delete('/api/persons/:id', (req, res) => {
+    const id = req.params.id
+    persons = persons.filter(person => person.id != id)
+    res.status(204).end()
+})
+
+app.post("/api/persons", (req, res) => {
+    const body = req.body
+
+    const nameExists = persons.find(person => person.name == body.name)
+    
+
+    if (nameExists) {
+        return res.json({"error": "Person with that name already exists"})
+    }
+
+    if (!body.name || !body.number) {
+        return res.json({"error": "missing data, check that you have name and number"})
+    }
+
+    console.log("No problem with post request")
+
+    const newPerson = {
+        "name": body.name,
+        "number": body.number,
+        "id": generateID()
+    }
+
+    // Lisätään uusi henkilö yhteystietoihin
+    persons = persons.concat(newPerson)
+
+    res.status(200).end()
+})
 
 
 // Käynnistetään serveri
