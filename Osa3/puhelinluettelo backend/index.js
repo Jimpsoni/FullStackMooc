@@ -66,19 +66,10 @@ app.delete('/api/persons/:id', (req, res) => {
 
 app.post("/api/persons", (req, res) => {
     const body = req.body
-
     const nameExists = persons.find(person => person.name == body.name)
     
-
-    if (nameExists) {
-        return res.json({"error": "Person with that name already exists"})
-    }
-
-    if (!body.name || !body.number) {
-        return res.json({"error": "missing data, check that you have name and number"})
-    }
-
-    console.log("No problem with post request")
+    if (nameExists) return res.json({"error": "Person with that name already exists"})
+    if (!body.name || !body.number) return res.json({"error": "missing data, check that you have name and number"})
 
     const newPerson = {
         "name": body.name,
@@ -88,7 +79,6 @@ app.post("/api/persons", (req, res) => {
 
     // Lisätään uusi henkilö yhteystietoihin
     persons = persons.concat(newPerson)
-
     res.status(200).end()
 })
 
