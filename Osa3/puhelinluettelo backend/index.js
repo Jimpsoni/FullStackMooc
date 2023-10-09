@@ -6,7 +6,20 @@ const app = express()
 app.use(express.json())
 
 // Morgan middleware
-app.use(morgan('tiny'))
+morgan.token('data', function (req, res) { if (req.method == "POST") {return JSON.stringify(req.body)} })
+
+app.use(
+    morgan(function (tokens, req, res) {
+        return [
+          tokens.method(req, res),
+          tokens.url(req, res),
+          tokens.status(req, res),
+          tokens.res(req, res, 'content-length'), '-',
+          tokens['response-time'](req, res), 'ms',
+          tokens.data(req, res)
+        ].join(' ')
+      })
+)
 
 // Määritellään yhteystiedot
 let persons = [
