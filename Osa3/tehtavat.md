@@ -5,7 +5,7 @@
 ✔️| 3.5: puhelinluettelon backend step5 <br>
 ✔️| 3.6: puhelinluettelon backend step6 <br>
 ✔️| 3.7: puhelinluettelon backend step7 <br>
-⌛ | 3.8: puhelinluettelon backend step8 <br>
+✔️| 3.8: puhelinluettelon backend step8 <br>
 ⌛ | 3.9: puhelinluettelon backend step9 <br>
 ⌛ | 3.10: puhelinluettelon backend step10 <br>
 ⌛ | 3.11: puhelinluettelo fullstack <br>
