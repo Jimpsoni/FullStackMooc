@@ -5,6 +5,9 @@ const app = express()
 // Jotta voidaan parsea json objektit
 app.use(express.json())
 
+// Morgan middleware
+app.use(morgan('tiny'))
+
 // Määritellään yhteystiedot
 let persons = [
       {
