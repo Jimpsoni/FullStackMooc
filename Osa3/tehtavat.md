@@ -7,8 +7,8 @@
 ✔️| 3.7: puhelinluettelon backend step7 <br>
 ✔️| 3.8: puhelinluettelon backend step8 <br>
 ✔️| 3.9: puhelinluettelon backend step9 <br>
-⌛ | 3.10: puhelinluettelon backend step10 <br>
-⌛ | 3.11: puhelinluettelo fullstack <br>
+✔️| 3.10: puhelinluettelon backend step10 <br>
+✔️| 3.11: puhelinluettelo fullstack <br>
 ⌛ | 3.12: tietokanta komentoriviltä <br>
 ⌛ | 3.13: puhelinluettelo ja tietokanta, step1 <br>
 ⌛ | 3.14: puhelinluettelo ja tietokanta, step2 <br>
