@@ -1,11 +1,13 @@
 // määritellään express
 const express = require('express')
+const morgan = require('morgan')
 const app = express()
+const cors = require('cors')
 
-// Jotta voidaan parsea json objektit
+// Middlewaret
 app.use(express.json())
+app.use(cors())
 
-// Morgan middleware
 morgan.token('data', function (req, res) { if (req.method == "POST") {return JSON.stringify(req.body)} })
 
 app.use(
@@ -19,7 +21,9 @@ app.use(
           tokens.data(req, res)
         ].join(' ')
       })
+
 )
+
 
 // Määritellään yhteystiedot
 let persons = [
@@ -42,13 +46,17 @@ let persons = [
         "name": "Mary Poppendieck",
         "number": "39-23-6423122",
         "id": 4
+      },
+      {
+        "name": "Peppi",
+        "number": "123",
+        "id": 5
       }
 ]
 
 
 // funktio joka luo uuden ID:n
 const generateID = () => Math.floor(Math.random() * 1000)
-
 
 
 // Määritellään API kutsut
