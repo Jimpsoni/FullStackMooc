@@ -15,6 +15,6 @@
 ✔️| 2.15: puhelinluettelo step10<br>
 ✔️| 2.16: puhelinluettelo step11<br>
 ✔️| 2.17: puhelinluettelo step12<br>
-⌛ | 2.18: maiden tiedot step1<br>
+✔️| 2.18: maiden tiedot step1<br>
 ⌛ | 2.19: maiden tiedot step2<br>
 ⌛ | 2.20: maiden tiedot step3<br>
