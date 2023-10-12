@@ -11,6 +11,5 @@ Part 2   18/20 ✔️ <br>
 Part 3   22/22 ✔️ <br><br><br>
 
 
-Yhteensä 52
-
+Yhteensä 60
 
