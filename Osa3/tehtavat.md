@@ -19,4 +19,4 @@
 ✔️| 3.19: puhelinluettelo ja tietokanta, step7 <br>
 ✔️| 3.20: puhelinluettelo ja tietokanta, step8 <br>
 ✔️| 3.21: tietokantaa käyttävä versio Internetiin <br>
-⌛ | 3.22: lint-konfiguraatio <br>
+✔️| 3.22: lint-konfiguraatio <br>
