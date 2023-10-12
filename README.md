@@ -8,7 +8,7 @@ Exercises per chapters
 Part 0   6/6 ✔️ <br>
 Part 1   14/14 ✔️ <br>
 Part 2   18/20 ✔️ <br>
-Part 3   14/22 ✔️ <br><br><br>
+Part 3   22/22 ✔️ <br><br><br>
 
 
 Yhteensä 52
