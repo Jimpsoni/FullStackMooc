@@ -14,9 +14,8 @@ const cors = require('cors')
 app.use(express.json())
 app.use(cors())
 
-
 const morgan = require('morgan')
-morgan.token('data', function (req, res) { if (req.method == "POST") {return JSON.stringify(req.body)} })
+morgan.token('data', (req) => { if (req.method == 'POST') {return JSON.stringify(req.body)} })
 app.use(
     morgan(function (tokens, req, res) {
         return [
@@ -31,14 +30,12 @@ app.use(
 
 )
 
-
 // Määritellään API kutsut
 app.get('/api/persons', (req, res, next) => { 
   Person.find({}).then(person => {
   res.json(person) })
   .catch(error => next(error))
 })
-
 
 app.get('/api/persons/:id', (req, res, next) => {
     const id = req.params.id
@@ -49,26 +46,23 @@ app.get('/api/persons/:id', (req, res, next) => {
 
 })
 
-
 app.get('/info', (req, res, next) => {
     Person.countDocuments({})
     .then(
       result => {
         const message = `Phonebook has info for ${result} people`
-        const time = new Date();
+        const time = new Date()
         res.send(`<p> ${message}</p> <p> ${time}</p>`)
       }
     )
     .catch( error => next(error))
 }) 
 
-
 app.delete('/api/persons/:id', (req, res, next) => {
     Person.findByIdAndRemove(req.params.id)
-      .then( result => res.status(204).end() )
+      .then( () => res.status(204).end() )
       .catch( error => next(error) )
 })
-
 
 app.put('/api/persons/:id', (req, res, next) => {
   const body = req.body
@@ -87,13 +81,12 @@ app.put('/api/persons/:id', (req, res, next) => {
     .catch(error => next(error))
 })
 
-
-app.post("/api/persons", (req, res, next) => {
+app.post('/api/persons', (req, res, next) => {
     const body = req.body
     
     const newPerson = new Person({
-        "name": body.name,
-        "number": body.number,
+        'name': body.name,
+        'number': body.number,
     })
 
     // Lisätään uusi henkilö yhteystietoihin
@@ -102,7 +95,6 @@ app.post("/api/persons", (req, res, next) => {
     })
     .catch(error => next(error))
 })
-
 
 // Error handler middleware
 const errorHandler = (error, request, response, next) => {
@@ -123,7 +115,10 @@ const errorHandler = (error, request, response, next) => {
 
 app.use(errorHandler)
 
+
+
 // Käynnistetään serveri
+// eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
