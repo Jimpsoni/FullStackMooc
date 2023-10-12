@@ -16,7 +16,7 @@
 ✔️| 3.16: puhelinluettelo ja tietokanta, step4 <br>
 ✔️| 3.17: puhelinluettelo ja tietokanta, step5 <br>
 ✔️| 3.18: puhelinluettelo ja tietokanta, step6 <br>
-⌛ | 3.19: puhelinluettelo ja tietokanta, step7 <br>
-⌛ | 3.20: puhelinluettelo ja tietokanta, step8 <br>
-⌛ | 3.21: tietokantaa käyttävä versio Internetiin <br>
+✔️| 3.19: puhelinluettelo ja tietokanta, step7 <br>
+✔️| 3.20: puhelinluettelo ja tietokanta, step8 <br>
+✔️| 3.21: tietokantaa käyttävä versio Internetiin <br>
 ⌛ | 3.22: lint-konfiguraatio <br>
