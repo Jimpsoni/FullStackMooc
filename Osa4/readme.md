@@ -1,5 +1,5 @@
 ✔️| 4.1 blogilista, step1 <br>
-⌛ | 4.2 blogilista, step2 <br>
+✔️| 4.2 blogilista, step2 <br>
 ⌛ | 4.3 apufunktioita ja yksikkötestejä, step1 <br>
 ⌛ | 4.4: apufunktioita ja yksikkötestejä, step2 <br>
 ⌛ | 4.5 apufunktioita ja yksikkötestejä, step3 <br>
