@@ -5,11 +5,11 @@ and the link for Render server is https://fullstackmoocjimi.onrender.com/ <br><b
 
 Exercises per chapters
 
-Part 0   6/6 ✔️ <br>
-Part 1   14/14 ✔️ <br>
-Part 2   18/20 ✔️ <br>
-Part 3   22/22 ✔️ <br>
-Part 4   8/23 ✔️ <br>
+Part 0 &nbsp;&nbsp;  6/6 ✔️ <br>
+Part 1 &nbsp;&nbsp;  14/14 ✔️ <br>
+Part 2 &nbsp;&nbsp;  18/20 ✔️ <br>
+Part 3 &nbsp;&nbsp;  22/22 ✔️ <br>
+Part 4 &nbsp;&nbsp;  8/23 ✔️ <br>
 
 <br>
 Yhteensä 68
