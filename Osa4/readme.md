@@ -1,8 +1,8 @@
 ✔️| 4.1 blogilista, step1 <br>
 ✔️| 4.2 blogilista, step2 <br>
-⌛ | 4.3 apufunktioita ja yksikkötestejä, step1 <br>
-⌛ | 4.4: apufunktioita ja yksikkötestejä, step2 <br>
-⌛ | 4.5 apufunktioita ja yksikkötestejä, step3 <br>
+✔️| 4.3 apufunktioita ja yksikkötestejä, step1 <br>
+✔️| 4.4: apufunktioita ja yksikkötestejä, step2 <br>
+✔️| 4.5 apufunktioita ja yksikkötestejä, step3 <br>
 ⌛ | 4.6 apufunktioita ja yksikkötestejä, step4 <br>
 ⌛ | 4.7 apufunktioita ja yksikkötestejä, step5 <br>
 ⌛ | 4.8: blogilistan testit, step 1 <br>
