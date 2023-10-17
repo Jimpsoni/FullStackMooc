@@ -19,4 +19,7 @@
 ✔️| 3.19: puhelinluettelo ja tietokanta, step7 <br>
 ✔️| 3.20: puhelinluettelo ja tietokanta, step8 <br>
 ✔️| 3.21: tietokantaa käyttävä versio Internetiin <br>
-✔️| 3.22: lint-konfiguraatio <br>
+✔️| 3.22: lint-konfiguraatio <br><br><br>
+
+repo for phonebook backend is located at https://github.com/Jimpsoni/puhelinluettelobackend <br>
+and the link for Render server is https://fullstackmoocjimi.onrender.com/ <br><br>
