@@ -8,10 +8,10 @@
 ✔️| 4.8: blogilistan testit, step 1 <br>
 ✔️| 4.9: blogilistan testit, step2 <br>
 ✔️| 4.10: blogilistan testit, step3 <br>
-⌛ | 4.11: blogilistan testit, step4 <br>
-⌛ | 4.12: blogilistan testit, step5 <br>
-⌛ | 4.13 blogilistan laajennus, step1 <br>
-⌛ | 4.14 blogilistan laajennus, step2 <br>
+✔️| 4.11: blogilistan testit, step4 <br>
+✔️| 4.12: blogilistan testit, step5 <br>
+✔️| 4.13 blogilistan laajennus, step1 <br>
+✔️| 4.14 blogilistan laajennus, step2 <br>
 ⌛ | 4.15 blogilistan laajennus, step3 <br>
 ⌛ | 4.16 blogilistan laajennus, step4 <br>
 ⌛ | 4.17 blogilistan laajennus, step5 <br>
