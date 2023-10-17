@@ -64,6 +64,7 @@ describe("Test api methods at api/blogs", () => {
 })
 
 
+
 describe("Some values are empty", () => {
     test("If we dont give likes a value", async () => {
         const request = {
@@ -182,7 +183,6 @@ describe("Editing a blog", () => {
     })
 
 })
-
 
 
 afterAll(async () => {
