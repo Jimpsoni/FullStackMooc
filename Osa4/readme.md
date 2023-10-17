@@ -16,8 +16,8 @@
 ✔️| 4.16 blogilistan laajennus, step4 <br>
 ✔️| 4.17 blogilistan laajennus, step5 <br>
 ✔️| 4.18 blogilistan laajennus, step6 <br>
-⌛ | 4.19 blogilistan laajennus, step7 <br>
-⌛ | 4.20 blogilistan laajennus, step8 <br>
-⌛ | 4.21 blogilistan laajennus, step9 <br>
-⌛ | 4.22 blogilistan laajennus, step10 <br>
+✔️| 4.19 blogilistan laajennus, step7 <br>
+✔️| 4.20 blogilistan laajennus, step8 <br>
+✔️| 4.21 blogilistan laajennus, step9 <br>
+✔️| 4.22 blogilistan laajennus, step10 <br>
 ⌛ | 4.23 blogilistan laajennus, step11 <br>
