@@ -9,7 +9,7 @@
 ✔️| 5.9 blogilistan frontend, step9 <br>
 ✔️| 5.10 blogilistan frontend, step10 <br>
 ✔️| 5.11 blogilistan frontend, step11 <br>
-⌛ | 5.12 blogilistan frontend, step12 <br>
+✔️| 5.12 blogilistan frontend, step12 <br>
 ⌛ | 5.13 blogilistan testit, step1 <br>
 ⌛ | 5.14 blogilistan testit, step2 <br>
 ⌛ | 5.15 blogilistan testit, step3 <br>
