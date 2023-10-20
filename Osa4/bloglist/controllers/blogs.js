@@ -14,7 +14,7 @@ blogRouter.get('/', (request, response) => {
   })
   
 
-blogRouter.post('/', userExtractor, async (request, response) => {
+blogRouter.post('/', userExtractor, (request, response) => {
   const body = request.body
   const user = request.user
 
@@ -35,13 +35,18 @@ blogRouter.delete('/:id', userExtractor, async (request, response) => {
   let blog
   try {
     blog = await Blog.findById(request.params.id)
-  } 
-  catch { return response.status(400).end() }
+    } 
+  catch { 
+    return response.status(400).end() 
+  }
 
   if ( blog.user.toString() === request.user.id.toString() ) {
-    Blog.findByIdAndRemove(request.params.id)
-    .then( () => response.status(204).end() )
-    .catch( () => response.status(500).end() )
+    try {
+      const response = await Blog.findByIdAndRemove(request.params.id)
+      response.status(204).end()
+    } catch {
+      response.status(500).end()
+    }
   } else {
     response.status(401).end()
   }
