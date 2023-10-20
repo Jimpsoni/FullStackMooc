@@ -19,9 +19,17 @@ usersRouter.post('/', async (req, res) => {
         passwordHash
     })
 
-    user.save()
-    .then(savedUser => res.status(201).json(savedUser))
-    .catch( error => { if (error.name === "ValidationError") res.status(400).json( { error: "Bad username, must be atleast 3 chars and unique" } )} )
+    try {
+        savedUser = await user.save()
+        res.status(201).json(savedUser)
+    }
+    catch (error) {
+        if (error.name === "ValidationError") {
+            res.status(400).json( { 
+                error: "Bad username, must be atleast 3 chars and unique" 
+            })
+        }
+    }
 })
 
 
