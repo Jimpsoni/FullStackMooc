@@ -20,5 +20,5 @@
 ✔️| 5.20 blogilistan end to end ‑testit, step4 <br>
 ✔️| 5.21 blogilistan end to end ‑testit, step5 <br>
 ✔️| 5.22 blogilistan end to end ‑testit, step6 <br>
-⌛ | 5.23 blogilistan end to end ‑testit, step7 <br>
+✔️| 5.23 blogilistan end to end ‑testit, step7 <br>
 
