@@ -1,7 +1,7 @@
 ✔️| 6.1: Unicafe revisited, step1 <br>
 ✔️| 6.2: Unicafe revisited, step2 <br>
-⏳ | 6.3: anekdootit, step1<br>
-⏳ | 6.4: anekdootit, step2<br>
+✔️| 6.3: anekdootit, step1<br>
+✔️| 6.4: anekdootit, step2<br>
 ⏳ | 6.5: anekdootit, step3<br>
 ⏳ | 6.6: anekdootit, step4<br>
 ⏳ | 6.7: anekdootit, step5<br>
