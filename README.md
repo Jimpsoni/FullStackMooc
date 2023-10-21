@@ -15,5 +15,5 @@ Part 6 &nbsp;&nbsp;  0/24 ✔️ <br>
 Part 7 &nbsp;&nbsp;  0/21 ✔️ <br>
 
 <br>
-Yhteensä 102
+Total of 102
 
