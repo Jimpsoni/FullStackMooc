@@ -83,9 +83,9 @@ describe('Blog app ', function() {
       
         it('A blog can liked', function() {
           cy.get('.showBlog').click()
-          cy.get('#likeCount').should('contain', '0')
-          cy.get('#likeBlog').click()
-          cy.get('#likeCount').should('contain', '1')
+          cy.get('.likeCount').should('contain', '0')
+          cy.get('.likeBlog').click()
+          cy.get('.likeCount').should('contain', '1')
         })
 
         it('A blog can be removed', function() {
@@ -111,11 +111,16 @@ describe('Blog app ', function() {
         })
 
         it('Blogs are sorted', function() {
-          
+          cy.createBlog({ title: 'Testing your application', author: 'Jimi Jukkala', url: 'omat nettisivut', likes:15 })
+          cy.createBlog({ title: 'Javascript', author: 'Peppi', url: 'omat nettisivut', likes:20 })
+
+          cy.get('.showBlog').click({ multiple: true })
+
+          cy.get('.blogItem').eq(0).should('contain', 'Javascript Peppi')
+          cy.get('.blogItem').eq(1).should('contain', 'Testing your application Jimi Jukkala')
+          cy.get('.blogItem').eq(2).should('contain', 'Fuzzy frontend Meow Meow fuzzyface')
 
         })
-
-
       })
     })
 
