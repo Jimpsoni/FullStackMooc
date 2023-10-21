@@ -10,15 +10,15 @@
 ✔️| 5.10 blogilistan frontend, step10 <br>
 ✔️| 5.11 blogilistan frontend, step11 <br>
 ✔️| 5.12 blogilistan frontend, step12 <br>
-⌛ | 5.13 blogilistan testit, step1 <br>
-⌛ | 5.14 blogilistan testit, step2 <br>
-⌛ | 5.15 blogilistan testit, step3 <br>
-⌛ | 5.16 blogilistan testit, step4 <br>
-⌛ | 5.17 blogilistan end to end ‑testit, step1 <br>
-⌛ | 5.18 blogilistan end to end ‑testit, step2 <br>
-⌛ | 5.19 blogilistan end to end ‑testit, step3 <br>
-⌛ | 5.20 blogilistan end to end ‑testit, step4 <br>
-⌛ | 5.21 blogilistan end to end ‑testit, step5 <br>
-⌛ | 5.22 blogilistan end to end ‑testit, step6 <br>
+✔️| 5.13 blogilistan testit, step1 <br>
+✔️| 5.14 blogilistan testit, step2 <br>
+✔️| 5.15 blogilistan testit, step3 <br>
+✔️| 5.16 blogilistan testit, step4 <br>
+✔️| 5.17 blogilistan end to end ‑testit, step1 <br>
+✔️| 5.18 blogilistan end to end ‑testit, step2 <br>
+✔️| 5.19 blogilistan end to end ‑testit, step3 <br>
+✔️| 5.20 blogilistan end to end ‑testit, step4 <br>
+✔️| 5.21 blogilistan end to end ‑testit, step5 <br>
+✔️| 5.22 blogilistan end to end ‑testit, step6 <br>
 ⌛ | 5.23 blogilistan end to end ‑testit, step7 <br>
 
