@@ -13,10 +13,10 @@
 ✔️| 6.13 paremmat anekdootit, step11<br>
 ✔️| 6.14 anekdootit ja backend, step1<br>
 ✔️| 6.15 anekdootit ja backend, step2<br>
-⏳ | 6.16 anekdootit ja backend, step3<br>
-⏳ | 6.17 anekdootit ja backend, step4<br>
-⏳ | 6.18 anekdootit ja backend, step5<br>
-⏳ | 6.19 anekdootit ja backend, step6<br>
+✔️| 6.16 anekdootit ja backend, step3<br>
+✔️| 6.17 anekdootit ja backend, step4<br>
+✔️| 6.18 anekdootit ja backend, step5<br>
+✔️| 6.19 anekdootit ja backend, step6<br>
 ⏳ | Tehtävä 6.20<br>
 ⏳ | Tehtävä 6.21<br>
 ⏳ | Tehtävä 6.22<br>
