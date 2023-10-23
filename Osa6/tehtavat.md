@@ -9,8 +9,8 @@
 ✔️| 6.9 paremmat anekdootit, step7<br>
 ✔️| 6.10: anekdootit, step8<br>
 ✔️| 6.11: anekdootit, step9<br>
-⏳ | 6.12: anekdootit, step10<br>
-⏳ | 6.13 paremmat anekdootit, step11<br>
+✔️| 6.12: anekdootit, step10<br>
+✔️| 6.13 paremmat anekdootit, step11<br>
 ⏳ | 6.14 anekdootit ja backend, step1<br>
 ⏳ | 6.15 anekdootit ja backend, step2<br>
 ⏳ | 6.16 anekdootit ja backend, step3<br>
