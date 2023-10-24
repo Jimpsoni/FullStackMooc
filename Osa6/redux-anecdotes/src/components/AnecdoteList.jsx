@@ -1,29 +1,46 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { voteAnecdote } from '../reducers/anecdoteReducer'
+import { changeFilter } from '../reducers/filterReducer'
+import { setNotification } from '../reducers/notificationReducer'
 
 const AnecdoteList = () => {
-    const anecdotes = useSelector(state => state)
-    const dispatch = useDispatch()
+  const filter = useSelector(state => state.filter)
+
+  const filterFunc = ( item ) => {
+    if (!filter) return item
+    if (item.content.toLowerCase().includes(filter.payload.toLowerCase())) {
+      return item
+    }
+    return
+  }
+
+  const dispatch = useDispatch()
+  const anecdotes = useSelector(state => {
+    return state.anecdotes.filter(filterFunc)
+  })
   
-    // Logic
-    const vote = (id) => dispatch(voteAnecdote(id))
-    const sortingFunc = (a, b) =>  b.votes - a.votes 
+  const vote = ( anecdote ) => {
+    dispatch(voteAnecdote(anecdote))
+    dispatch(setNotification(`Voted anecdote "${anecdote.content}"`, 4))
+  }
   
-    return (
-      <>
-        {anecdotes.sort(sortingFunc).map(anecdote =>
-          <div key={anecdote.id}>
-            <div>
-              {anecdote.content}
-            </div>
-            <div>
-              has {anecdote.votes}
-              <button onClick={() => vote(anecdote.id)}>vote</button>
-            </div>
+  const sortingFunc = ( a, b ) =>  b.votes - a.votes
+  
+  return (
+    <>
+      {anecdotes.filter(filterFunc).sort(sortingFunc).map(anecdote =>
+        <div key={anecdote.id}>
+          <div>
+            {anecdote.content}
           </div>
-        )}
-      </>
-    )
+          <div>
+            has {anecdote.votes}
+            <button onClick={() => vote(anecdote)}>vote</button>
+          </div>
+        </div>
+      )}
+    </>
+  )
 }
 
 export default AnecdoteList
