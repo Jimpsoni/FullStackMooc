@@ -19,7 +19,7 @@
 ✔️| 6.19 anekdootit ja backend, step6<br>
 ✔️| Tehtävä 6.20<br>
 ✔️| Tehtävä 6.21<br>
-⏳ | Tehtävä 6.22<br>
-⏳ | Tehtävä 6.23<br>
-⏳ | Tehtävä 6.24<br>
+✔️| Tehtävä 6.22<br>
+✔️| Tehtävä 6.23<br>
+✔️| Tehtävä 6.24<br>
 
