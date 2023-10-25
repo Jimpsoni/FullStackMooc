@@ -1,9 +1,9 @@
 ✔️| 7.1: routed anecdotes, step1 <br>
 ✔️| 7.2: routed anecdotes, step2 <br>
 ✔️| 7.3: routed anecdotes, step3 <br>
-⌛ | 7.4: anekdoottisovellus ja hookit step1 <br>
-⌛ | 7.5: anekdoottisovellus ja hookit step2 <br>
-⌛ | 7.6: anekdoottisovellus ja hookit step3 <br>
+✔️| 7.4: anekdoottisovellus ja hookit step1 <br>
+✔️| 7.5: anekdoottisovellus ja hookit step2 <br>
+✔️| 7.6: anekdoottisovellus ja hookit step3 <br>
 ⌛ | 7.7: country hook <br>
 ⌛ | 7.8: ultimate hooks <br>
 ⌛ | 7.9: koodin automaattinen muotoilu <br>
