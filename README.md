@@ -12,8 +12,8 @@ Part 3 &nbsp;&nbsp;  22/22 ✔️ <br>
 Part 4 &nbsp;&nbsp;  20/23 ✔️ <br>
 Part 5 &nbsp;&nbsp;  23/23 ✔️ <br>
 Part 6 &nbsp;&nbsp;  24/24 ✔️ <br>
-Part 7 &nbsp;&nbsp;  0/21 ✔️ <br>
+Part 7 &nbsp;&nbsp;  6/21 ✔️ <br>
 
 <br>
-Total of 127
+Total of 133
 
