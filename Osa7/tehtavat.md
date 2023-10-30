@@ -7,10 +7,10 @@
 ⌛ | 7.7: country hook <br>
 ⌛ | 7.8: ultimate hooks <br>
 ✔️| 7.9: koodin automaattinen muotoilu <br>
-⌛ | 7.10: Redux, step1 <br>
-⌛ | 7.11: Redux, step2 <br>
-⌛ | 7.12: Redux, step3 <br>
-⌛ | 7.13: Redux, step4 <br>
+✔️| 7.10: Redux, step1 <br>
+✔️| 7.11: Redux, step2 <br>
+✔️| 7.12: Redux, step3 <br>
+✔️| 7.13: Redux, step4 <br>
 ⌛ | 7.14: käyttäjien näkymä <br>
 ⌛ | 7.15: yksittäisen käyttäjän näkymä <br>
 ⌛ | 7.16: blogin näkymä <br>
