@@ -17,5 +17,5 @@
 ✔️| 7.17: navigointi <br>
 ✔️| 7.18: kommentit, step1 <br>
 ✔️| 7.19: kommentit, step2 <br>
-⌛ | 7.20: tyylit, step1 <br>
+✔️| 7.20: tyylit, step1 <br>
 ⌛ | 7.21: tyylit, step2 <br>
