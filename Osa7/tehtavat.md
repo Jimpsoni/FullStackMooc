@@ -13,7 +13,7 @@
 ✔️| 7.13: Redux, step4 <br>
 ⌛ | 7.14: käyttäjien näkymä <br>
 ⌛ | 7.15: yksittäisen käyttäjän näkymä <br>
-⌛ | 7.16: blogin näkymä <br>
+✔️| 7.16: blogin näkymä <br>
 ⌛ | 7.17: navigointi <br>
 ⌛ | 7.18: kommentit, step1 <br>
 ⌛ | 7.19: kommentit, step2 <br>
