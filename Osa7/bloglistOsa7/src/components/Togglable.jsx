@@ -1,10 +1,20 @@
 import { useState, useImperativeHandle, forwardRef } from "react"
+import { Button } from "react-bootstrap"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const Togglable = forwardRef((props, ref) => {
   const [visible, setVisible] = useState(false)
 
-  const hideWhenVisible = { display: visible ? "none" : "" }
-  const showWhenVisible = { display: visible ? "" : "none" }
+  const hideWhenVisible = { 
+    display: visible ? "none" : "",
+    marginBottom: 17,
+    marginTop: 17
+  
+  }
+  const showWhenVisible = { 
+    display: visible ? "" : "none",
+    margin: 50
+  }
 
   const toggleVisibility = () => {
     setVisible(!visible)
@@ -19,11 +29,11 @@ const Togglable = forwardRef((props, ref) => {
   return (
     <div>
       <div style={hideWhenVisible}>
-        <button onClick={toggleVisibility}>{props.buttonLabel}</button>
+        <Button onClick={toggleVisibility}>{props.buttonLabel}</Button>
       </div>
       <div style={showWhenVisible}>
         {props.children}
-        <button onClick={toggleVisibility}>cancel</button>
+        <Button onClick={toggleVisibility}>cancel</Button>
       </div>
     </div>
   )

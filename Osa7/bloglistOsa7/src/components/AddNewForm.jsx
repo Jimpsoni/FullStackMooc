@@ -1,4 +1,3 @@
-import { exact } from "prop-types"
 import { useState } from "react"
 
 const AddNewForm = ({ createBlog }) => {

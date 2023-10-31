@@ -2,6 +2,7 @@ import axios from "axios"
 import store from "../store"
 const baseUrl = "http://localhost:3003/api/blogs"
 
+
 const getToken = () => {
   return `Bearer ${store.getState().user}`
 }
@@ -19,4 +20,8 @@ const remove = (id) => {
   axios.delete(baseUrl + `/${id}`, config).catch((error) => console.log(error))
 }
 
-export default { getAll, create, update, remove }
+const updateComments = (id, data) => {
+  return axios.post(`${baseUrl}/${id}/comments`, data)
+}
+
+export default { getAll, create, update, remove, updateComments }

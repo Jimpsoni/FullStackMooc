@@ -1,39 +1,23 @@
-import { useState } from "react"
-import blogService from "../services/blogs"
 import PropTypes from "prop-types"
+import { useState } from "react"
+import { ListGroup, Button } from "react-bootstrap"
 
 // Redux logix
 import { setNotification } from "../reducers/notificationReducer"
 import { useDispatch } from "react-redux"
 import { deleteBlog, likeBlog } from "../reducers/blogReducer"
+import blogService from "../services/blogs"
 
-const Blog = ({ blog, username }) => {
-  const [buttonLabel, setButtonLabel] = useState("View")
-  const [visible, setVisible] = useState(false)
-  const isOwner = blog.user.username === username
+const Blog = ({ blog }) => {
+  if (blog === undefined)
+    return <h2>Could not find the blog you were looking for :/</h2>
+
   const dispatch = useDispatch()
-
+  const [comment, setComment] = useState("")
+  const [comments, setComments] = useState(blog.comments)
 
   Blog.propTypes = {
     blog: PropTypes.object.isRequired,
-    username: PropTypes.string.isRequired,
-  }
-
-  const showWhenVisible = { display: visible ? "" : "none" }
-
-  const blogStyle = {
-    paddingTop: 10,
-    paddingBottom: 5,
-    paddingLeft: 2,
-    border: "solid",
-    borderWidth: 1,
-    marginTop: 15,
-  }
-
-  const handleShow = () => {
-    setVisible(!visible)
-    if (visible) setButtonLabel("View")
-    else setButtonLabel("Hide")
   }
 
   const handleLike = () => {
@@ -51,29 +35,63 @@ const Blog = ({ blog, username }) => {
     }
   }
 
+  const submitComment = async (event) => {
+    event.preventDefault()
+    const newComments = await blogService.updateComments(
+      blog.id,
+      comments.concat(comment)
+    )
+    console.log(newComments.data.comments)
+    setComments(newComments.data.comments)
+    setComment("")
+  }
+
+  const isOwner = blog.user.username === "Jimi"
+
   return (
-    <div style={blogStyle} className="blogItem">
+    <div className="blogItem">
       <div>
-        {blog.title} {blog.author}
-        <button className="showBlog" onClick={handleShow}>
-          {buttonLabel}
-        </button>
+        <h1>
+          {blog.title} {blog.author}
+        </h1>
       </div>
-      <div data-testid="moreInfo" style={showWhenVisible}>
-        <div>{blog.url}</div>
-        <div className="likeCount">
-          {" "}
-          {blog.likes}{" "}
-          <button className="likeBlog" onClick={handleLike}>
-            Like
-          </button>{" "}
-        </div>
-        <div>{blog.user.name}</div>
+      <div>
+        <ListGroup style={{marginBottom:10, marginTop:15}}>
+          <ListGroup.Item variant="dark" >{blog.url}</ListGroup.Item>
+          <ListGroup.Item className="likeCount">
+            {" "}
+            {blog.likes}
+            {" Likes"}
+            <Button className="likeBlog" onClick={handleLike}>
+              Like
+            </Button>{" "}
+          </ListGroup.Item>
+          <ListGroup.Item variant="dark" >Added by {blog.user.name}</ListGroup.Item>
+        </ListGroup>
+
         {isOwner && (
-          <button className="removeBlog" onClick={handleRemove}>
+          <Button className="removeBlog" onClick={handleRemove}>
             Remove
-          </button>
+          </Button>
         )}
+
+        <h2>Comments:</h2>
+        <ul>
+          {comments.map((comment) => {
+            return <li key={comment}>{comment}</li>
+          })}
+        </ul>
+
+        <form onSubmit={submitComment}>
+          <input
+            type="text"
+            value={comment}
+            placeholder="Your comment"
+            onChange={({ target }) => setComment(target.value)}
+          />
+          <button type="submit">add a comment</button>
+        </form>
+
       </div>
     </div>
   )

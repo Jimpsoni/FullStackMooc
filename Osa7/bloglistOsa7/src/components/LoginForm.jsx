@@ -38,10 +38,17 @@ const LoginForm = ({ setUser }) => {
     }
   }
 
+  const center = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: "15%"
+  }
+
   return (
-    <>
+    <div style={center}>
       {message && <Message message={message} />}
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleLogin} >
         <div>
           username:
           <input
@@ -68,7 +75,7 @@ const LoginForm = ({ setUser }) => {
           login
         </button>
       </form>
-    </>
+    </div>
   )
 }
 
