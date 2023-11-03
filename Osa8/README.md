@@ -1,3 +1,5 @@
 Tehtävät tehty:
 
-✔️| 8.1: kirjojen ja kirjailijoiden määrä
+✔️| 8.1: kirjojen ja kirjailijoiden määrä <br>
+✔️| 8.2: kaikki kirjat
+
