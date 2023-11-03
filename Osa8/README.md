@@ -5,4 +5,6 @@ Tehtävät tehty:
 ✔️| 8.3: kaikki kirjailijat <br>
 ✔️| 8.4: kirjailijan kirjat <br>
 ✔️| 8.5: genren kirjat <br>
+✔️| 8.6: Kirjan lisäys <br>
+✔️| 8.7: Kirjailijan syntymävuoden päivitys <br>
 
