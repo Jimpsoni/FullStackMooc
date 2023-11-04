@@ -12,3 +12,7 @@ Tehtävät tehty:
 ✔️| 8.10: Kirjan lisäys <br>
 ✔️| 8.11: Kirjailijan syntymävuosi <br>
 ✔️| 8.12: Kirjailijan syntymävuosi advanced<br>
+✔️| 8.13: Tietokanta, osa 1 <br>
+✔️| 8.14: Tietokanta, osa 2 <br>
+✔️| 8.15 Tietokanta, osa 3 <br>
+✔️| 8.16 käyttäjä ja kirjautuminen <br>
