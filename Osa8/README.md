@@ -16,3 +16,5 @@ Tehtävät tehty:
 ✔️| 8.14: Tietokanta, osa 2 <br>
 ✔️| 8.15 Tietokanta, osa 3 <br>
 ✔️| 8.16 käyttäjä ja kirjautuminen <br>
+✔️| 8.17 Kirjojen lista <br>
+✔️| 8.18 Kirjautuminen <br>
