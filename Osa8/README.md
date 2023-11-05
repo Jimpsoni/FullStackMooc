@@ -18,3 +18,6 @@ Tehtävät tehty:
 ✔️| 8.16 käyttäjä ja kirjautuminen <br>
 ✔️| 8.17 Kirjojen lista <br>
 ✔️| 8.18 Kirjautuminen <br>
+✔️| 8.19 Genren kirjat <br>
+✔️| 8.20 Lempigenren kirjat <br>
+✔️| 8.21 Genren kirjat GraphQL:llä <br>
