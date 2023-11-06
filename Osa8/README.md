@@ -24,5 +24,5 @@ Tehtävät tehty:
 ⌛ | 8.22 Välimuistin ajantasaisuus <br>
 ✔️| 8.23: Subscriptionit palvelin <br>
 ✔️| 8.24: Subscriptionit client, osa 1 <br>
-⌛ | 8.25: Subscriptionit client, osa 2 <br>
+✔️| 8.25: Subscriptionit client, osa 2 <br>
 ⌛ | 8.26: n+1 <br>
