@@ -1,8 +1,8 @@
 import { useMutation, useQuery } from "@apollo/client"
 import { ALL_AUTHORS, UPDATE_BIRTHYEAR } from "../queries"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-const Authors = () => {
+const Authors = ({ token }) => {
   const result = useQuery(ALL_AUTHORS)
   const [changeBirthyear] = useMutation(UPDATE_BIRTHYEAR, {
     refetchQueries: [{ query: ALL_AUTHORS }],
@@ -27,14 +27,12 @@ const Authors = () => {
       variables: { name, setBornTo: parseInt(born) },
     })
 
-    setSelectedName('')
     setBorn("")
   }
 
   const handleChange = (e) => {
     setSelectedName(e.target.value)
   }
-
 
   return (
     <div>
@@ -56,26 +54,30 @@ const Authors = () => {
         </tbody>
       </table>
 
-      <h2>Set Birthyear</h2>
-      <form onSubmit={submitBirthyear}>
-        <div>
-          name:{" "}
-          <select value={selectedName} onChange={handleChange}>
-            {authors.map((a) => (
-              <option key={a.name}>{a.name}</option>
-            ))}
-          </select>
-        </div>
-        <div>
-          birthyear:{" "}
-          <input
-            type="number"
-            value={born}
-            onChange={({ target }) => setBorn(target.value)}
-          />
-        </div>
-        <button type="submit">Update Author</button>
-      </form>
+      {token && (
+        <>
+          <h2>Set Birthyear</h2>
+          <form onSubmit={submitBirthyear}>
+            <div>
+              name:{" "}
+              <select value={selectedName} onChange={handleChange}>
+                {authors.map((a) => (
+                  <option key={a.name}>{a.name}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              birthyear:{" "}
+              <input
+                type="digit"
+                value={born}
+                onChange={({ target }) => setBorn(target.value)}
+              />
+            </div>
+            <button type="submit">Update Author</button>
+          </form>
+        </>
+      )}
     </div>
   )
 }
