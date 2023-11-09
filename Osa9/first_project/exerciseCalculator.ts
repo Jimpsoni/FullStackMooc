@@ -1,4 +1,4 @@
-interface Exercises {
+interface ExerciseData {
   numberOfDays: number;
   numberOfTrainingDays: number;
   targetValue: number;
@@ -8,7 +8,41 @@ interface Exercises {
   description: String;
 }
 
-const exerciseCalculator = (weeklyExercise: number[], targetValue: number): Exercises => {
+interface exercisesTable {
+    weeklyExercise: number[];
+    targetValue: number;
+}
+
+
+const parseArgumentsExercises = (args: String[], ): exercisesTable => {
+    if (args.length < 4) throw new Error("Not enough arguments");
+
+    const weeklyExercise = [];
+    let targetValue;
+
+    if (!isNaN(Number(args[args.length - 1]))) {
+        targetValue = Number(args[args.length - 1])
+    } else {
+        throw new Error("Only numeric values are accepted")
+    };
+
+    for (let i = 2; i < args.length - 1; i++) {
+        if (!isNaN(Number(args[i]))) {
+            weeklyExercise.push(Number(args[i]));
+        } else {
+            throw new Error("Only numeric values are accepted")
+        };
+    };
+
+    return {
+        weeklyExercise,
+        targetValue
+    };
+};
+
+
+
+const exerciseCalculator = (weeklyExercise: number[], targetValue: number): ExerciseData => {
   const numberOfTrainingDays = weeklyExercise.filter((hours) => hours > 0).length;
   const avgTime = weeklyExercise.reduce((prev, current) => prev + current) / weeklyExercise.length;
   const targetReached = avgTime > targetValue;
@@ -29,7 +63,7 @@ const exerciseCalculator = (weeklyExercise: number[], targetValue: number): Exer
     case 3:
       description = "You reached your goal! Well done!";
       break;
-  }
+  };
 
   return {
     numberOfDays: weeklyExercise.length,
@@ -42,7 +76,6 @@ const exerciseCalculator = (weeklyExercise: number[], targetValue: number): Exer
   };
 };
 
-const exercises = [3, 0, 2, 4.5, 0, 3, 1];
-const target = 15;
 
-console.log(exerciseCalculator(exercises, target));
+const { weeklyExercise, targetValue } = parseArgumentsExercises(process.argv);
+console.log(exerciseCalculator(weeklyExercise, targetValue));
