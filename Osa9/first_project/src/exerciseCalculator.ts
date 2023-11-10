@@ -13,33 +13,30 @@ interface exercisesTable {
   targetValue: number;
 }
 
-const parseArgumentsExercises = (args: string[]): exercisesTable => {
-  if (args.length < 4) throw new Error("Not enough arguments");
 
-  const weeklyExercise = [];
-  let targetValue;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const parseArgumentsExercises = ( exercises: any[], target: any ): exercisesTable | null => {
+  if (!Array.isArray(exercises)) return null;
+  if (exercises.length < 1) return null;
 
-  if (!isNaN(Number(args[args.length - 1]))) {
-    targetValue = Number(args[args.length - 1]);
-  } else {
-    throw new Error("Only numeric values are accepted");
+
+  for (let i = 0; i < exercises.length; i++) {
+    const num = Number(exercises[i]);
+    if (isNaN(Number(num))) return null;
+    exercises[i] = num;
   }
 
-  for (let i = 2; i < args.length - 1; i++) {
-    if (!isNaN(Number(args[i]))) {
-      weeklyExercise.push(Number(args[i]));
-    } else {
-      throw new Error("Only numeric values are accepted");
-    }
-  }
+
+  const t = Number(target);
+  if (isNaN(Number(t))) return null;
 
   return {
-    weeklyExercise,
-    targetValue,
+    weeklyExercise: exercises,
+    targetValue: target,
   };
 };
 
-const exerciseCalculator = (
+export const exerciseCalculator = (
   weeklyExercise: number[],
   targetValue: number
 ): ExerciseData => {
@@ -49,7 +46,7 @@ const exerciseCalculator = (
   const avgTime =
     weeklyExercise.reduce((prev, current) => prev + current) /
     weeklyExercise.length;
-  const targetReached = avgTime > targetValue;
+  const targetReached = avgTime >= targetValue;
 
   let rating = 0;
   if (avgTime / targetValue < 0.5) rating = 1;
@@ -80,5 +77,4 @@ const exerciseCalculator = (
   };
 };
 
-const { weeklyExercise, targetValue } = parseArgumentsExercises(process.argv);
-console.log(exerciseCalculator(weeklyExercise, targetValue));
+export default { exerciseCalculator, parseArgumentsExercises };

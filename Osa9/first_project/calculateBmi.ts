@@ -1,6 +1,6 @@
-type Data = { height: number, weight: number}
+interface bodyValues { height: number, weight: number}
 
-const parseArguments = (args: string[]): Data => {
+const parseArguments = (args: string[]): bodyValues => {
   if (args.length < 4) throw new Error("Not enough arguments");
   if (args.length > 4) throw new Error("Too many arguments");
   if (Number(args[2]) === 0) throw new Error("Height cant be 0");
