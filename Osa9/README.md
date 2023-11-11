@@ -11,4 +11,6 @@
 ✔️ | 9.11: Patientor backend, step4 <br>
 ✔️ | 9.12: Patientor backend, step5 <br>
 ✔️ | 9.13: Patientor backend, step6 <br>
+✔️ | 9.14 <br>
+✔️ | 9.15 <br>
 
