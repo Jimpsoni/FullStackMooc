@@ -17,3 +17,5 @@
 ✔️ | Exercise 9.17<br>
 ✔️ | Exercise 9.18<br>
 ✔️ | Exercise 9.19<br>
+✔️ | 9.20: Patientor, step1<br>
+✔️ | 9.21: Patientor, step2<br>
