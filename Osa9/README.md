@@ -13,4 +13,7 @@
 ✔️ | 9.13: Patientor backend, step6 <br>
 ✔️ | 9.14 <br>
 ✔️ | 9.15 <br>
-
+✔️ | Exercise 9.16 <br>
+✔️ | Exercise 9.17<br>
+✔️ | Exercise 9.18<br>
+✔️ | Exercise 9.19<br>
