@@ -21,4 +21,4 @@
 ✔️ | 9.21: Patientor, step2<br>
 
 
-22 - 24 ei vielä pushattu, muutoksia fronttiin ja bäckiin
+22 - 25 ei vielä pushattu, muutoksia fronttiin ja bäckiin
