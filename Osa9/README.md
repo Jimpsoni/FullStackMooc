@@ -19,6 +19,7 @@
 ✔️ | Exercise 9.19<br>
 ✔️ | 9.20: Patientor, step1<br>
 ✔️ | 9.21: Patientor, step2<br>
-
-
-22 - 25 ei vielä pushattu, muutoksia fronttiin ja bäckiin
+✔️ | 9.22: Patientor, step 3<br>
+✔️ | 9.23: Patientor, step 4<br>
+✔️ | 9.24: Patientor, step 5<br>
+✔️ | 9.25: Patientor, step 6<br>
