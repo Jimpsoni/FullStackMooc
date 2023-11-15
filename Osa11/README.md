@@ -15,3 +15,5 @@ Tehdyt tehtävät  <br><br>
 ✔️ | 11.14 Run deployment step only for the main branch <br>
 ✔️ | 11.15 Adding versioning<br>
 ✔️ | 11.16 Skipping a commit for tagging and deployment <br>
+✔️ | 11.17 Adding protection to your main branch <br>
+✔️ | 11.18 Build success/failure notification action<br>
