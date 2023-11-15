@@ -14,3 +14,4 @@ Tehdyt tehtävät  <br><br>
 ✔️ | 11.13 Pull request <br>
 ✔️ | 11.14 Run deployment step only for the main branch <br>
 ✔️ | 11.15 Adding versioning<br>
+✔️ | 11.16 Skipping a commit for tagging and deployment <br>
