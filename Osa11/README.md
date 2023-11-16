@@ -7,7 +7,7 @@ Tehdyt tehtävät  <br><br>
 ✔️ | 11.6 Fix the code <br>
 ✔️ | 11.7 Building and testing <br>
 ✔️ | 11.8 Back to green <br>
- ⌛ | 11.9 Simple end to end tests <br>
+✔️ | 11.9 Simple end to end tests <br>
 ✔️ | 11.10 Deploying your application to Render <br>
 ✔️ | 11.11 Automatic deployments <br>
 ✔️ | 11.12 Health check <br>
