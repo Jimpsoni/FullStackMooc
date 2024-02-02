@@ -1,3 +1,8 @@
+Linkki Pokedexiin: https://github.com/Jimpsoni/full-stack-open-pokedex<br>
+Linkki omaan pipelineen: https://github.com/Jimpsoni/puhelinluettelobackend
+<br>
+<br>
+
 Tehdyt tehtävät  <br><br>
 ✔️ | 11.1 Warming up <br>
 ✔️ | 11.2 The example project  <br>
